@@ -14,6 +14,8 @@ def HDL_input():
     HDL_value = input("Enter the HDL result:")
     HDL_value = int(HDL_value)
     return  HDL_value
+
+
 def HDL_analysis(HDL_int):
     if HDL_int >= 60:
         answer = "Normal"
@@ -22,4 +24,9 @@ def HDL_analysis(HDL_int):
     else:
         answer = "Low"
     return answer
+
+def HDL_driver():
+    HDL_in = HDL_input()
+    HDL_analy = HDL_analysis(HDL_in)
+
 interface()
