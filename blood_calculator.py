@@ -1,3 +1,6 @@
+print("This is the blood_calculator.py file")
+print("Python thinks this is called{}".format(__name__))
+
 def interface():
     print("Blood calculator")
     keep = True
@@ -93,4 +96,5 @@ def LDL_output(LDL_value, LDL_analy):
     print("The LDL result of {} is considered {}".format(LDL_value, LDL_analy))
     return
 
-interface()
+if __name__ == "__main__": #(to make sure this wont come out when importing)
+    interface()
