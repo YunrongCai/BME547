@@ -69,11 +69,11 @@ def LDL_analysis(LDL_int):
     if LDL_int < 130:
         answer = "Normal"
     elif 130 <= LDL_int <= 159:
-        answer = "Borderline high"
+        answer = "Borderline High"
     elif 160 <= LDL_int <= 189:
         answer = "High"
     else:
-        answer = "very high"
+        answer = "Very High"
     return answer
 
 def Total_Cholesterol_analysis(HDL_in,LDL_in):
