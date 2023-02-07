@@ -27,6 +27,7 @@ def intersection_check(input):
     else:
         return False
 
+#changed 
 #input = [(1,2),(4,8),(3,9)]
 #y = intersection_check(input)
 #print(y)
