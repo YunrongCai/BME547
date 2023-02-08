@@ -5,6 +5,7 @@
              type of medical treatment or diagnostics.
 """
 
+
 def diagnosis_info():
     print("Day One Dosing Guidelines")
     print("")
@@ -15,6 +16,7 @@ def diagnosis_info():
     print("4 - Pharyngitis/tonsilitis")
     diagnosis = int(input("Enter a number: "))
     return diagnosis
+
 
 def patient_info():
     print("PATIENT WEIGHT")
@@ -28,7 +30,8 @@ def patient_info():
         weight = weight / 2.205
     return weight
 
-def dosage_calculation(diagnosis,weight):
+
+def dosage_calculation(diagnosis, weight):
     dosages_mg_per_kg = [30, 10, 10, 12]
     dosage_mg_per_kg = dosages_mg_per_kg[diagnosis-1]
     dosage_mg_first_day = weight * dosage_mg_per_kg
@@ -37,10 +40,12 @@ def dosage_calculation(diagnosis,weight):
     print("  the correct dosage is {:.1f} mg the first day"
           .format(dosage_mg_first_day))
 
+
 def dose_amount():
     diagnosis = diagnosis_info()
-    weight =  patient_info()
+    weight = patient_info()
     dosage_calculation(diagnosis, weight)
+
 
 if __name__ == '__main__':
     dose_amount()

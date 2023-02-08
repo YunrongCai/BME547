@@ -1,24 +1,25 @@
 print("This is the blood_calculator.py file")
 print("Python thinks this is called{}".format(__name__))
 
+
 def interface():
     print("Blood calculator")
     keep = True
     LDL_tag = False
     HDL_tag = False
-    while keep :
+    while keep:
         print("Options:")
         print("1 - HDL")
         print("2 - LDL")
         print("9 - Quit")
         choice = input("Select an option:")
-        if choice =="9":
+        if choice == "9":
             keep = False
-        elif choice =="1":
+        elif choice == "1":
             HDL_in = HDL_driver()
             HDL_tag = True
-        elif choice =="2":
-            LDL_in =LDL_driver()
+        elif choice == "2":
+            LDL_in = LDL_driver()
             LDL_tag = True
         if (HDL_tag) & (LDL_tag):
             print("##########################")
@@ -47,12 +48,13 @@ def LDL_driver():
 def HDL_input():
     HDL_value = input("Enter the HDL result:")
     HDL_value = int(HDL_value)
-    return  HDL_value
+    return HDL_value
+
 
 def LDL_input():
     LDL_value = input("Enter the LDL result:")
     LDL_value = int(LDL_value)
-    return  LDL_value
+    return LDL_value
 
 
 def HDL_analysis(HDL_int):
@@ -76,7 +78,8 @@ def LDL_analysis(LDL_int):
         answer = "Very High"
     return answer
 
-def Total_Cholesterol_analysis(HDL_in,LDL_in):
+
+def Total_Cholesterol_analysis(HDL_in, LDL_in):
     Total_Cholesterol = HDL_in + LDL_in
     if Total_Cholesterol < 200:
         answer = "Normal"
@@ -84,7 +87,8 @@ def Total_Cholesterol_analysis(HDL_in,LDL_in):
         answer = "Borderline high"
     else:
         answer = "High"
-    print("The Total_Cholesterol result of {} is considered {}".format(Total_Cholesterol,answer))
+    print("The Total_Cholesterol result of {} is considered {}"
+          .format(Total_Cholesterol, answer))
     return
 
 
@@ -92,9 +96,18 @@ def HDL_output(HDL_value, HDL_analy):
     print("The HDL result of {} is considered {}".format(HDL_value, HDL_analy))
     return
 
+
 def LDL_output(LDL_value, LDL_analy):
     print("The LDL result of {} is considered {}".format(LDL_value, LDL_analy))
     return
 
-if __name__ == "__main__": #(to make sure this wont come out when importing)
+
+def check_fever(input_list):
+    for temperature in input_list:
+        if temperature > 100.5:
+            return True
+    return False
+
+
+if __name__ == "__main__":  # (to make sure this wont come out when importing)
     interface()
