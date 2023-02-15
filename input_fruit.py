@@ -20,7 +20,7 @@ def read_file(filename):
     patient_id = analyze_ID(first_line)
 
 def test_read_file():
-    from module impoet read_file
+    from module import read_file
     filename = 'my_text_data.txt'
     answer = read_file(filename)
     expected = 50
