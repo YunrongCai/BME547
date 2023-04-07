@@ -1,0 +1,1 @@
+mongodb+srv://yc551:<password>@bme547.fqdewfv.mongodb.net/?retryWrites=true&w=majority
